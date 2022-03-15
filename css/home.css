@@ -1,0 +1,149 @@
+.top .img1{
+  width: 202px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.bottom-top {
+  width: 30%;
+  height: 30%;
+  /* background: red; */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.bottom-top img:nth-child(1){
+  position: absolute;
+  top: 20px;
+  width: 74px;
+  height: 36px;
+  background-size: 100% 100%;
+}
+.bottom-top img:nth-child(2){
+  position: absolute;
+   top: 40px;
+ /* left: 50%;
+  transform: translateX(-50%); */
+  margin: 0 auto;
+  width: 64px;
+  height: 71px;
+  background-size: 100% 100%;
+}
+.bottom-top img:nth-child(3){
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-44%);
+  width: 93px;
+  height: 139px;
+  background-size: 100% 100%;
+}
+.bottom p {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-size: 28px;
+  color: #fecc1f;
+  font-weight: 800;
+  font-family: 'STXingkai';
+}
+
+.bottom #imga{
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  top: -28px;
+  left: 11px;
+  transform: rotate(351deg);
+}
+.bottom #imgb{
+  width: 46px;
+  height: 32px;
+  position: absolute;
+  top: -30px;
+  left: 102px;
+  transform: rotate(351deg);
+}
+.bottom #imgc{
+  width: 49px;
+  height: 35px;
+  position: absolute;
+  top: -33px;
+  left: 219px;
+  transform: rotate(3deg);
+}
+.bottom #imgd{
+  width: 54px;
+  height: 38px;
+  position: absolute;
+  top: -29px;
+  left: 296px;
+  transform: rotate(11deg);
+}
+
+.bottom #imge{
+  width: 51px;
+  height: 40px;
+  position: absolute;
+  top: 76px;
+  left: 22px;
+  transform: rotate(336deg);
+}
+.bottom #imgf{
+  width: 46px;
+  height: 32px;
+  position: absolute;
+  top: 145px;
+  left: 102px;
+  transform: rotate(22deg);
+}
+.bottom #imgg{
+  width: 49px;
+  height: 35px;
+  position: absolute;
+  top: 98px;
+  left: 262px;
+  transform: rotate(13deg);
+}
+.bottom #imgh{
+  width: 49px;
+  height: 36px;
+  position: absolute;
+  top: 255px;
+  left: 310px;
+  transform: rotate(17deg);
+}
+
+.bottom #imgi{
+  width: 49px;
+  height: 35px;
+  position: absolute;
+  top: 313px;
+  left: 154px;
+  transform: rotate(328deg);
+}
+.bottom #imgj{
+  width: 49px;
+  height: 36px;
+  position: absolute;
+  top: 252px;
+  left: 43px;
+  transform: rotate(23deg);
+}
+.bottom .imgee{
+  width: 42px;
+  height: 29px;
+  position: absolute;
+  top: 270px;
+  left: 98px;
+  transform: rotate(336deg);
+}
+
+
+

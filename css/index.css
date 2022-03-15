@@ -1,0 +1,195 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* 大盒子 */
+.template{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgb(122, 199, 250);
+}
+/* 上模板 */
+.template .top {
+  flex: 3.5;
+  position: relative;
+  /* background: green; */
+}
+.top ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.top ul li:nth-child(1) img { 
+  width: 186px;
+  height: 84px; 
+  position: absolute;
+  top: 7px;
+  right: 6px;
+}
+.top ul li:nth-child(2) img { 
+  width: 200px;
+  height: 88px;
+  position: absolute;
+  top: 82px;
+  left: -46px;
+}
+.top ul li:nth-child(3) img { 
+  width: 200px;
+  height: 88px;
+  position: absolute;
+  bottom: 1px;
+  right: -46px;
+}
+/* 倒计时 / 得分  */
+.time {
+  width: 130px;
+  height: 121px;
+  position: absolute;
+  bottom: -10px;
+  right: 80px;
+  /* background: red; */
+}
+.time img:first-child {
+  width: 100%;
+  height: 100%;
+}
+.time .p1{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 53px;
+  height: 30px;
+}
+.p1 span{
+  position: absolute;
+  top: 0px;
+  right: -46px;
+  font-size: 34px;
+  color: #fecc1f;
+  font-weight: 800;
+  font-family: 'STXingkai';
+
+}
+.time .p2{
+  position: absolute;
+  top: 41px;
+  left: 10px;
+  width: 50px;
+  height: 30px;
+}
+.p2 span{
+  position: absolute;
+  top: 0px;
+  right: -46px;
+  font-size: 34px;
+  color: #fecc1f;
+  font-weight: 800;
+  font-family: 'STXingkai';
+}
+/* 下模板 */
+.template .bottom{
+  flex: 6.5;
+  background: url('../images/4370f9a5-bc02-4e8a-b828-0a67a5e30300.png') no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.bottom .Gophers{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  /* background: yellow; */
+}
+.Gophers ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Gophers ul li {
+  width: 30%;
+  height: 30%;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.Gophers ul li .top2{
+  position: absolute;
+  top: 20px;
+  width: 74px;
+  height: 36px;
+  background-size: 100% 100%;
+}
+.Gophers ul li .tenter{
+  position: absolute;
+   top: 30px;
+ /* left: 50%;
+  transform: translateX(-50%); */
+  margin: 0 auto;
+  width: 64px;
+  height: 71px;
+  background-size: 100% 100%;
+}
+.Gophers ul li .bottom2{
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-44%);
+  width: 93px;
+  height: 139px;
+  background-size: 100% 100%;
+}
+/* 游戏结束模板 */
+.end{
+  width: 65%;
+  height: 30%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%);
+  background: url('../images/2ceb5b008-137a-4acd-8abb-2f95b0a13082.png') no-repeat;
+  background-size: 100% 100%;
+  display: none;
+  z-index: 999;
+}
+.end .endS{
+  position: absolute;
+  top: 40%;
+  left: 44%;
+  transform: translate(-50%,-50%);
+  width: 75%;
+  height: 56%;
+  /* background: red; */
+}
+.endS p{
+  margin-top: 15px;
+  font-size: 28px;
+  color: #fecc1f;
+  font-weight: 800;
+  font-family: 'STXingkai';
+}
+.endS p:last-child{
+  font-size: 35px;
+  text-align: center;
+}
+/* 音乐模块 */
