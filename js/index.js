@@ -170,13 +170,9 @@ window.onload = function(){
   // 时间倒计时结束
   function countdown(){
     p1Span.innerHTML--;
-    if(p1Span.innerHTML == 20){
-      clearInterval(time0);
-      time0 = setInterval(create,800);
-    }
     if(p1Span.innerHTML <= 10){
       clearInterval(time0);
-      time0 = setInterval(create,500);
+      time0 = setInterval(create,800);
     }
     // 如果定时器小于0就关闭该定时器
     if(p1Span.innerHTML <= 0){
