@@ -10,9 +10,6 @@ window.onload = function(){
   let oEnd = document.querySelector('.end');
   let oHistory = document.querySelector('.history');
   let oStart = document.querySelector('.start');
-  let oBlow = document.querySelector('#blow');
-  let oEndMiose = document.querySelector('#endMiose');
-  console.log(oBlow,oEndMiose);
   let key = 0
   // 创建一个空数组
   let list = [];
@@ -163,7 +160,7 @@ window.onload = function(){
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
   // 老鼠动画开始
-  time0 = setInterval(create,900);
+  time0 = setInterval(create,1200);
   // 时间倒计时结束
   function countdown(){
     p1Span.innerHTML--;
@@ -171,15 +168,22 @@ window.onload = function(){
     if(p1Span.innerHTML <= 0){
       clearInterval(time7);
       clearInterval(time0);
-      oEndMiose.play();
+      clearInterval(time1);
+      clearInterval(time2);
       oEnd.style.display = 'block';
       // 背景变模糊
       oTop.style.filter = 'blur('+3+'px)';
-      oBottom.style.filter = 'blur('+3+'px)';
+      oBottom.style.filter = 'blur('+3+'px)'; 
+      // 创建音频
+      let audio = document.createElement('audio');
+      // 音频路径
+      audio.src ='./vudio/904b3a37-0628-412f-a294-5376b03ab06a.mp3';
+      // 音频的播放
+      audio.play();
     }
   }
   // 执行倒计时定时器
-  time7 = setInterval(countdown,1000);
+  time7 = setInterval(countdown,900);
   // 开始点击事件
   oStart.onclick = function(){
     // 将盒子隐藏
@@ -189,5 +193,4 @@ window.onload = function(){
   }
   // 获取本地存储数据
   oHistory.innerHTML = localStorage.getItem('name')
-
 }
