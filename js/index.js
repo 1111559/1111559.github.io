@@ -168,13 +168,18 @@ window.onload = function(){
   time0 = setInterval(create,1200);
   // 时间倒计时结束
   function countdown(){
+    let oTend = document.querySelectorAll('.Gophers .tenter');
+   
     p1Span.innerHTML--;
     if(p1Span.innerHTML <= 10){
       clearInterval(time0)
       time0 = setInterval(create,500);
     }
     // 如果定时器小于0就关闭该定时器
-    if(p1Span.innerHTML <= 0){
+    if(p1Span.innerHTML <= 0){ 
+      for(let i = 0;i<oTend.length;i++){
+      oTend[i].onmousedown = null;
+    }
       clearInterval(time7);
       clearInterval(time0);
       clearInterval(time1);
