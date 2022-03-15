@@ -166,13 +166,13 @@ window.onload = function(){
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
   // 老鼠动画开始
-  time0 = setInterval(create,1200);
+  time0 = setInterval(create,1300);
   // 时间倒计时结束
   function countdown(){
     p1Span.innerHTML--;
     if(p1Span.innerHTML <= 10){
       clearInterval(time0);
-      time0 = setInterval(create,800);
+      time0 = setInterval(create,900);
     }
     // 如果定时器小于0就关闭该定时器
     if(p1Span.innerHTML <= 0){
