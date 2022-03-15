@@ -163,7 +163,7 @@ window.onload = function(){
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
   // 老鼠动画开始
-  time0 = setInterval(create,1000);
+  time0 = setInterval(create,900);
   // 时间倒计时结束
   function countdown(){
     p1Span.innerHTML--;
