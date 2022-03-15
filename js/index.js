@@ -179,7 +179,7 @@ window.onload = function(){
     }
   }
   // 执行倒计时定时器
-  time7 = setInterval(countdown,900);
+  time7 = setInterval(countdown,1000);
   // 开始点击事件
   oStart.onclick = function(){
     // 将盒子隐藏
