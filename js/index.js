@@ -1,4 +1,9 @@
 window.onload = function(){
+  let link = document.createElement('link')
+  link.type = 'image/x-icon';
+  link.rel = 'shortcut icon';
+  link.href = 'favicon.ico';
+  document.getElementsByTagName('head')[0].appendChild(link);
   // 1, 获取元素
   let lis = document.querySelectorAll('.Gophers li');
   let oTop = document.querySelector('.top')
@@ -30,14 +35,15 @@ window.onload = function(){
   function create(){
     let oImg = new Image();
     randome = getRandomInt(0,9);
+    console.log(randome);
     list.push(randome);
     oImg.src = './images/7f796d0f-e6d0-41cd-acd4-e22f7c322d4d.png';
     oImg.className = 'tenter';
     // 判断从一个洞频繁出现
-    if(randome === list[list.length-2] ){
+    if(randome === list[list.length-2] || randome === list[list.length-3]){
       let rad = getRandomInt(0,9);
+      list.push(rad);
       randome = rad; 
-      return randome
     }
     // 地鼠随机从地洞窜出
     lis[randome].insertBefore(oImg,lis[randome].childNodes[2]);
@@ -164,6 +170,14 @@ window.onload = function(){
   // 时间倒计时结束
   function countdown(){
     p1Span.innerHTML--;
+    if(p1Span.innerHTML == 20){
+      clearInterval(time0);
+      time0 = setInterval(create,800);
+    }
+    if(p1Span.innerHTML <= 10){
+      clearInterval(time0);
+      time0 = setInterval(create,500);
+    }
     // 如果定时器小于0就关闭该定时器
     if(p1Span.innerHTML <= 0){
       clearInterval(time7);
