@@ -35,13 +35,12 @@ window.onload = function(){
   function create(){
     let oImg = new Image();
     randome = getRandomInt(0,9);
-    console.log(randome);
     list.push(randome);
     oImg.src = './images/7f796d0f-e6d0-41cd-acd4-e22f7c322d4d.png';
     oImg.className = 'tenter';
     // 判断从一个洞频繁出现
     if(randome === list[list.length-2] || randome === list[list.length-3]){
-      let rad = getRandomInt(0,9);
+      let rad = getRandomInt(0,randome);
       list.push(rad);
       randome = rad; 
     }
@@ -166,13 +165,13 @@ window.onload = function(){
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
   // 老鼠动画开始
-  time0 = setInterval(create,1300);
+  time0 = setInterval(create,1200);
   // 时间倒计时结束
   function countdown(){
     p1Span.innerHTML--;
     if(p1Span.innerHTML <= 10){
-      clearInterval(time0);
-      time0 = setInterval(create,900);
+      clearInterval(time0)
+      time0 = setInterval(create,500);
     }
     // 如果定时器小于0就关闭该定时器
     if(p1Span.innerHTML <= 0){
@@ -184,6 +183,7 @@ window.onload = function(){
       // 背景变模糊
       oTop.style.filter = 'blur('+3+'px)';
       oBottom.style.filter = 'blur('+3+'px)'; 
+
       // 创建音频
       let audio = document.createElement('audio');
       // 音频路径
@@ -193,7 +193,7 @@ window.onload = function(){
     }
   }
   // 执行倒计时定时器
-  time7 = setInterval(countdown,900);
+  time7 = setInterval(countdown,1000);
   // 开始点击事件
   oStart.onclick = function(){
     // 将盒子隐藏
